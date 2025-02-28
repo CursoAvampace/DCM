@@ -88,6 +88,12 @@
       height: auto;
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      /* Efecto de movimiento: deslizar desde la izquierda */
+      animation: slideIn 1s ease-out;
+    }
+    @keyframes slideIn {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
     }
     .toc {
       margin: 30px 0;
