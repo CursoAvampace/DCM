@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarea 3 La Psicomotricidad - Da Cunha Goncalves Ana Maria</title>
   <style>
-    /* Reset básico y estilos generales */
+    /* Fondo colorido */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
+      background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
       color: #333;
       line-height: 1.6;
     }
@@ -19,7 +19,7 @@
       margin: 30px auto;
       background: #fff;
       padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
     header, footer {
       text-align: center;
@@ -71,28 +71,46 @@
     .toc a:hover {
       text-decoration: underline;
     }
-    /* Secciones de contenido */
-    .section {
-      margin-bottom: 50px;
+    /* Estilos para el Accordion */
+    .accordion {
+      background-color: #007BFF;
+      color: #fff;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      font-size: 1.2em;
+      transition: background-color 0.3s ease;
+      margin-bottom: 5px;
     }
-    .section h2 {
-      border-bottom: 2px solid #007BFF;
-      padding-bottom: 5px;
-      margin-bottom: 20px;
+    .accordion:hover,
+    .accordion.active {
+      background-color: #0056b3;
     }
-    .section h3 {
-      margin: 20px 0 10px;
+    .panel {
+      padding: 0 18px;
+      background-color: #fff;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      border: 1px solid #ddd;
+      margin-bottom: 15px;
+    }
+    .panel h3 {
       color: #007BFF;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
-    .section p {
+    .panel p {
       text-align: justify;
+      margin-bottom: 15px;
     }
-    /* Listas de beneficios */
     ul.benefits {
       list-style: disc inside;
       margin-left: 20px;
     }
-    /* Botón VOLVER */
     .volver {
       text-align: right;
       margin-top: 20px;
@@ -111,11 +129,17 @@
       border-top: 1px solid #ddd;
       padding-top: 15px;
     }
+    /* Imágenes responsivas */
+    .panel img {
+      width: 100%;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Encabezado con título principal -->
+    <!-- Encabezado -->
     <header>
       <h1>La Magia de la Psicomotricidad:</h1>
       <h2>Cuerpo, Emociones y Mente en Armonía</h2>
@@ -156,99 +180,109 @@
 
     <!-- Sección 1: Introducción -->
     <section id="introduccion" class="section">
-      <h2>1. INTRODUCCIÓN</h2>
-      <p>
-        La psicomotricidad es un campo fundamental en la educación infantil, ya que permite el desarrollo integral del niño o niña a través del movimiento y la expresión corporal. Existen dos enfoques principales que han sido ampliamente estudiados y aplicados: la psicomotricidad vivenciada o relacional y la psicomotricidad directiva o dirigida. Este trabajo tiene como objetivo analizar sus características, beneficios y diferencias, para finalmente reflexionar sobre cuál de ellas brinda mayores oportunidades de desarrollo al niño o niña.
-      </p>
-      <div class="volver"><a href="#toc">VOLVER</a></div>
+      <button class="accordion">1. INTRODUCCIÓN</button>
+      <div class="panel">
+        <p>
+          La psicomotricidad es un campo fundamental en la educación infantil, ya que permite el desarrollo integral del niño o niña a través del movimiento y la expresión corporal. Existen dos enfoques principales que han sido ampliamente estudiados y aplicados: la psicomotricidad vivenciada o relacional y la psicomotricidad directiva o dirigida. Este trabajo tiene como objetivo analizar sus características, beneficios y diferencias, para finalmente reflexionar sobre cuál de ellas brinda mayores oportunidades de desarrollo al niño o niña.
+        </p>
+        <div class="volver"><a href="#toc">VOLVER</a></div>
+      </div>
     </section>
 
     <!-- Sección 2: Psicomotricidad vivenciada o relacional -->
     <section id="vivenciada" class="section">
-      <h2>2. PSICOMOTRICIDAD VIVENCIADA O RELACIONAL</h2>
-      
-      <section id="vivenciada-fundamentos">
-        <h3>2.1. Características y fundamentos</h3>
-        <p>
-          La psicomotricidad vivenciada, propuesta por André Lapierre y Bernard Aucouturier, se basa en el juego libre y la expresividad del niño o niña. Este modelo promueve la exploración del entorno sin una estructura fija, permitiendo que cada infante descubra su cuerpo y sus emociones en relación con los demás.
-        </p>
-      </section>
-      
-      <section id="vivenciada-beneficios">
-        <h3>2.2. Beneficios y aplicaciones</h3>
-        <ul class="benefits">
-          <li>Fomenta la creatividad y la espontaneidad.</li>
-          <li>Ayuda en el desarrollo de la autonomía y la autoestima.</li>
-          <li>Permite la expresión de emociones y el desarrollo social.</li>
-          <li>Se utiliza en intervenciones terapéuticas para niños con dificultades emocionales o del desarrollo.</li>
-        </ul>
-      </section>
-      
-      <div class="volver"><a href="#toc">VOLVER</a></div>
+      <button class="accordion">2. PSICOMOTRICIDAD VIVENCIADA O RELACIONAL</button>
+      <div class="panel">
+        <div id="vivenciada-fundamentos">
+          <h3>2.1. Características y fundamentos</h3>
+          <p>
+            La psicomotricidad vivenciada, propuesta por André Lapierre y Bernard Aucouturier, se basa en el juego libre y la expresividad del niño o niña. Este modelo promueve la exploración del entorno sin una estructura fija, permitiendo que cada infante descubra su cuerpo y sus emociones en relación con los demás.
+          </p>
+        </div>
+        <div id="vivenciada-beneficios">
+          <h3>2.2. Beneficios y aplicaciones</h3>
+          <ul class="benefits">
+            <li>Fomenta la creatividad y la espontaneidad.</li>
+            <li>Ayuda en el desarrollo de la autonomía y la autoestima.</li>
+            <li>Permite la expresión de emociones y el desarrollo social.</li>
+            <li>Se utiliza en intervenciones terapéuticas para niños con dificultades emocionales o del desarrollo.</li>
+          </ul>
+        </div>
+        <div class="volver"><a href="#toc">VOLVER</a></div>
+      </div>
     </section>
 
     <!-- Sección 3: Psicomotricidad directiva o dirigida -->
     <section id="directiva" class="section">
-      <h2>3. PSICOMOTRICIDAD DIRECTIVA O DIRIGIDA</h2>
-      
-      <section id="directiva-fundamentos">
-        <h3>3.1. Características y fundamentos</h3>
-        <p>
-          Defendida por Henry Vayer, la psicomotricidad directiva se centra en una estructura organizada y actividades prediseñadas para el desarrollo de habilidades motoras específicas. Se basa en la repetición de ejercicios y la mejora progresiva de las capacidades físicas y cognitivas.
-        </p>
-      </section>
-      
-      <section id="directiva-beneficios">
-        <h3>3.2. Beneficios y aplicaciones</h3>
-        <ul class="benefits">
-          <li>Favorece el desarrollo de habilidades motoras específicas.</li>
-          <li>Facilita la adquisición de destrezas en actividades deportivas y escolares.</li>
-          <li>Mejora la coordinación y el control postural.</li>
-          <li>Es útil en la rehabilitación de niños con dificultades motrices.</li>
-        </ul>
-      </section>
-      
-      <div class="volver"><a href="#toc">VOLVER</a></div>
+      <button class="accordion">3. PSICOMOTRICIDAD DIRECTIVA O DIRIGIDA</button>
+      <div class="panel">
+        <div id="directiva-fundamentos">
+          <h3>3.1. Características y fundamentos</h3>
+          <p>
+            Defendida por Henry Vayer, la psicomotricidad directiva se centra en una estructura organizada y actividades prediseñadas para el desarrollo de habilidades motoras específicas. Se basa en la repetición de ejercicios y la mejora progresiva de las capacidades físicas y cognitivas.
+          </p>
+        </div>
+        <div id="directiva-beneficios">
+          <h3>3.2. Beneficios y aplicaciones</h3>
+          <ul class="benefits">
+            <li>Favorece el desarrollo de habilidades motoras específicas.</li>
+            <li>Facilita la adquisición de destrezas en actividades deportivas y escolares.</li>
+            <li>Mejora la coordinación y el control postural.</li>
+            <li>Es útil en la rehabilitación de niños con dificultades motrices.</li>
+          </ul>
+        </div>
+        <div class="volver"><a href="#toc">VOLVER</a></div>
+      </div>
     </section>
 
     <!-- Sección 4: Comparación entre ambos modelos -->
     <section id="comparacion" class="section">
-      <h2>4. COMPARACIÓN ENTRE AMBOS MODELOS</h2>
-      <p>
-        <!-- Espacio para una eventual comparación visual o textual -->
-      </p>
-      <div class="volver"><a href="#toc">VOLVER</a></div>
+      <button class="accordion">4. COMPARACIÓN ENTRE AMBOS MODELOS</button>
+      <div class="panel">
+        <img src="https://github.com/CursoAvampace/DCM/blob/main/tabla.jpg?raw=true" alt="Comparación de modelos">
+        <p>
+          La comparación de las diferencias y similitudes entre la psicomotricidad vivenciada y la directiva.
+        </p>
+        <div class="volver"><a href="#toc">VOLVER</a></div>
+      </div>
     </section>
 
     <!-- Sección 5: Reflexión personal -->
     <section id="reflexion" class="section">
-      <h2>5. REFLEXIÓN PERSONAL</h2>
-      <p>
-        En mi opinión, lo ideal sería combinar ambos enfoques para ofrecer un desarrollo integral al niño. La psicomotricidad vivenciada o libre permite que explore, se divierta y aprenda de forma natural, mientras que la psicomotricidad directiva o guiada ofrece estructura y apoyo cuando es necesario para reforzar habilidades específicas. Podría ser como compararlo con aprender a andar en bicicleta. Al principio, el niño puede intentarlo sin rueditas para descubrir por sí mismo cómo funciona el equilibrio. Sin embargo, si necesita ayuda extra, alguien puede sostenerle o darle consejos hasta que esté listo para manejarla solo.
-      </p>
-      <div class="volver"><a href="#toc">VOLVER</a></div>
+      <button class="accordion">5. REFLEXIÓN PERSONAL</button>
+      <div class="panel">
+        <p>
+          En mi opinión, lo ideal sería combinar ambos enfoques para ofrecer un desarrollo integral al niño. La psicomotricidad vivenciada o libre permite que explore, se divierta y aprenda de forma natural, mientras que la psicomotricidad directiva o guiada ofrece estructura y apoyo cuando es necesario para reforzar habilidades específicas. Podría ser como compararlo con aprender a andar en bicicleta: al principio, el niño puede intentarlo sin rueditas para descubrir por sí mismo cómo funciona el equilibrio; sin embargo, si necesita ayuda extra, alguien puede sostenerle o darle consejos hasta que esté listo para manejarla solo.
+        </p>
+        <div class="volver"><a href="#toc">VOLVER</a></div>
+      </div>
     </section>
 
     <!-- Sección 6: Conclusión -->
     <section id="conclusion" class="section">
-      <h2>6. CONCLUSIÓN</h2>
-      <p>
-        <!-- Se puede agregar contenido en caso de existir una conclusión escrita. -->
-      </p>
-      <div class="volver"><a href="#toc">VOLVER</a></div>
+      <button class="accordion">6. CONCLUSIÓN</button>
+      <div class="panel">
+        <img src="https://github.com/CursoAvampace/DCM/blob/main/tabla%20conclusion.jpg?raw=true" alt="Conclusión">
+        <p>
+          Una Tabla con la conclusion sacada de la tarea y sobre el tema de la Psicomotricidad
+        </p>
+        <div class="volver"><a href="#toc">VOLVER</a></div>
+      </div>
     </section>
 
     <!-- Sección 7: Bibliografía y webgrafía -->
     <section id="bibliografia" class="section">
-      <h2>7. BIBLIOGRAFÍA Y WEBGRAFÍA</h2>
-      <p>
-        García Núñez, J., &amp; Fernández Vidal, M. (1994). <em>Psicomotricidad y educación preescolar</em>. Narcea.<br>
-        Dupré, G. (1903). <em>Síndrome de la debilidad</em>. Publicación científica.<br>
-        Wallon, H. (1940). <em>El niño problemático</em>. PUF.<br>
-        ITE (Instituto de Tecnología Educativa). Recursos sobre psicomotricidad.<br>
-        Tema 4 DCM La Psicomotricidad.
-      </p>
-      <div class="volver"><a href="#toc">VOLVER</a></div>
+      <button class="accordion">7. BIBLIOGRAFÍA Y WEBGRAFÍA</button>
+      <div class="panel">
+        <p>
+          García Núñez, J., &amp; Fernández Vidal, M. (1994). <em>Psicomotricidad y educación preescolar</em>. Narcea.<br>
+          Dupré, G. (1903). <em>Síndrome de la debilidad</em>. Publicación científica.<br>
+          Wallon, H. (1940). <em>El niño problemático</em>. PUF.<br>
+          ITE (Instituto de Tecnología Educativa). Recursos sobre psicomotricidad.<br>
+          Tema 4 DCM La Psicomotricidad.
+        </p>
+        <div class="volver"><a href="#toc">VOLVER</a></div>
+      </div>
     </section>
 
     <!-- Pie de página -->
@@ -256,9 +290,24 @@
       <p>&copy; <span id="currentYear"></span> Da Cunha Goncalves Ana Maria</p>
     </footer>
   </div>
+
   <script>
-    // Actualiza el año actual dinámicamente
+    // Actualiza el año actual
     document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Función para el comportamiento tipo accordion (persiana)
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
   </script>
 </body>
 </html>
