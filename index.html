@@ -24,14 +24,71 @@
     header, footer {
       text-align: center;
       margin-bottom: 30px;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 {
-      font-size: 2em;
-      margin-bottom: 10px;
+    /* Título dinámico con entrada en círculos y degradado pastel */
+    .dynamic-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .dynamic-title h1 {
+      font-size: 2.5em;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientAnimation 8s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    /* Animación de círculos en el título */
+    .dynamic-title::before,
+    .dynamic-title::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      opacity: 0;
+    }
+    .dynamic-title::before {
+      width: 0;
+      height: 0;
+      background: rgba(255, 200, 200, 0.5);
+      animation: circleExpand 1.5s ease-out forwards;
+    }
+    .dynamic-title::after {
+      width: 0;
+      height: 0;
+      background: rgba(200, 255, 200, 0.5);
+      animation: circleExpand 1.5s ease-out forwards;
+      animation-delay: 0.5s;
+    }
+    @keyframes circleExpand {
+      from {
+        width: 0;
+        height: 0;
+        opacity: 1;
+      }
+      to {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+      }
     }
     header h2 {
       font-size: 1.5em;
-      margin-top: 0;
+      margin-top: 10px;
       color: #555;
     }
     .page-title {
@@ -45,6 +102,17 @@
     .page-title p {
       margin: 5px 0;
       font-weight: bold;
+    }
+    /* Sección de imagen de portada */
+    .cover-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .cover-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     /* Tabla de Contenidos */
     .toc {
@@ -138,19 +206,25 @@
   </style>
 </head>
 <body>
-  
   <div class="container">
-    <!-- Encabezado -->
+    <!-- Encabezado con título dinámico -->
     <header>
-      <h1>La Magia de la Psicomotricidad:</h1>
+      <div class="dynamic-title">
+        <h1>La Magia de la Psicomotricidad:</h1>
+      </div>
       <h2>Cuerpo, Emociones y Mente en Armonía</h2>
     </header>
- 
+
     <!-- Página de título -->
     <section class="page-title">
       <h2>Tarea 3 La Psicomotricidad</h2>
-       <img src="https://github.com/CursoAvampace/DCM/blob/main/IMG_20250228_175235.jpg" alt="Portada">
+      <p>Da Cunha Goncalves Ana Maria</p>
       <p>Explora, Descubre, Aprende: El Viaje de la Psicomotricidad</p>
+    </section>
+    
+    <!-- Imagen de Portada -->
+    <section class="cover-image">
+      <img src="https://raw.githubusercontent.com/CursoAvampace/DCM/main/IMG_20250228_175235.jpg" alt="Imagen de Portada">
     </section>
 
     <!-- Tabla de Contenidos -->
@@ -240,9 +314,9 @@
     <section id="comparacion" class="section">
       <button class="accordion">4. COMPARACIÓN ENTRE AMBOS MODELOS</button>
       <div class="panel">
-        <img src="https://github.com/CursoAvampace/DCM/blob/main/tabla.jpg?raw=true" alt="Comparación de modelos">
+        <img src="https://source.unsplash.com/800x400/?children,play" alt="Comparación de modelos">
         <p>
-          La comparación de las diferencias y similitudes entre la psicomotricidad vivenciada y la directiva.
+          Aquí se puede incluir una comparación visual o textual que resalte las diferencias y similitudes entre la psicomotricidad vivenciada y la directiva.
         </p>
         <div class="volver"><a href="#toc">VOLVER</a></div>
       </div>
@@ -263,9 +337,9 @@
     <section id="conclusion" class="section">
       <button class="accordion">6. CONCLUSIÓN</button>
       <div class="panel">
-        <img src="https://github.com/CursoAvampace/DCM/blob/main/tabla%20conclusion.jpg?raw=true" alt="Conclusión">
+        <img src="https://source.unsplash.com/800x400/?thought,reflection" alt="Conclusión">
         <p>
-          Una Tabla con la conclusion sacada de la tarea y sobre el tema de la Psicomotricidad
+          Se puede agregar contenido en esta sección para resumir y extraer las conclusiones del análisis realizado sobre los dos enfoques de la psicomotricidad.
         </p>
         <div class="volver"><a href="#toc">VOLVER</a></div>
       </div>
