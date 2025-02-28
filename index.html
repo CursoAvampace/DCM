@@ -7,10 +7,7 @@
   <!-- AOS Library CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    /* Fondo colorido */
+    html { scroll-behavior: smooth; }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -32,11 +29,10 @@
       position: relative;
       overflow: hidden;
     }
-    /* Título dinámico con entrada en círculos y degradado pastel */
-    .dynamic-title {
-      position: relative;
-      display: inline-block;
-      margin-bottom: 20px;
+    .dynamic-title { 
+      position: relative; 
+      display: inline-block; 
+      margin-bottom: 20px; 
     }
     .dynamic-title h1 {
       font-size: 2.5em;
@@ -54,7 +50,6 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    /* Animación de círculos en el título */
     .dynamic-title::before,
     .dynamic-title::after {
       content: "";
@@ -80,71 +75,31 @@
       animation-delay: 0.5s;
     }
     @keyframes circleExpand {
-      from {
-        width: 0;
-        height: 0;
-        opacity: 1;
-      }
-      to {
-        width: 300px;
-        height: 300px;
-        opacity: 0;
-      }
+      from { width: 0; height: 0; opacity: 1; }
+      to { width: 300px; height: 300px; opacity: 0; }
     }
-    header h2 {
-      font-size: 1.5em;
-      margin-top: 10px;
-      color: #555;
-    }
-    .page-title {
-      text-align: center;
-      margin: 40px 0;
-    }
-    .page-title h2 {
-      font-size: 1.8em;
-      margin-bottom: 10px;
-    }
-    .page-title p {
-      margin: 5px 0;
-      font-weight: bold;
-    }
-    /* Sección de imagen de portada */
-    .cover-image {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    header h2 { font-size: 1.5em; margin-top: 10px; color: #555; }
+    .page-title { text-align: center; margin: 40px 0; }
+    .page-title h2 { font-size: 1.8em; margin-bottom: 10px; }
+    .page-title p { margin: 5px 0; font-weight: bold; }
+    .cover-image { text-align: center; margin-bottom: 20px; }
     .cover-image img {
       max-width: 100%;
       height: auto;
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    /* Tabla de Contenidos */
     .toc {
       margin: 30px 0;
       padding: 20px;
       background: #e9ecef;
       border-radius: 5px;
     }
-    .toc h2 {
-      margin-top: 0;
-      text-align: center;
-    }
-    .toc ul {
-      list-style: none;
-      padding: 0;
-    }
-    .toc ul li {
-      margin: 8px 0;
-    }
-    .toc a {
-      text-decoration: none;
-      color: #007BFF;
-    }
-    .toc a:hover {
-      text-decoration: underline;
-    }
-    /* Estilos para el Accordion */
+    .toc h2 { margin-top: 0; text-align: center; }
+    .toc ul { list-style: none; padding: 0; }
+    .toc ul li { margin: 8px 0; }
+    .toc a { text-decoration: none; color: #007BFF; }
+    .toc a:hover { text-decoration: underline; }
     .accordion {
       background-color: #007BFF;
       color: #fff;
@@ -158,10 +113,7 @@
       transition: background-color 0.3s ease;
       margin-bottom: 5px;
     }
-    .accordion:hover,
-    .accordion.active {
-      background-color: #0056b3;
-    }
+    .accordion:hover, .accordion.active { background-color: #0056b3; }
     .panel {
       padding: 0 18px;
       background-color: #fff;
@@ -171,44 +123,23 @@
       border: 1px solid #ddd;
       margin-bottom: 15px;
     }
-    .panel h3 {
-      color: #007BFF;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
-    .panel p {
-      text-align: justify;
-      margin-bottom: 15px;
-    }
-    ul.benefits {
-      list-style: disc inside;
-      margin-left: 20px;
-    }
-    .volver {
-      text-align: right;
-      margin-top: 20px;
-    }
+    .panel h3 { color: #007BFF; margin-top: 20px; margin-bottom: 10px; }
+    .panel p { text-align: justify; margin-bottom: 15px; }
+    ul.benefits { list-style: disc inside; margin-left: 20px; }
+    .volver { text-align: right; margin-top: 20px; }
     .volver a {
       text-decoration: none;
       color: #007BFF;
       font-weight: bold;
     }
-    .volver a:hover {
-      text-decoration: underline;
-    }
+    .volver a:hover { text-decoration: underline; }
     footer {
       font-size: 0.8em;
       color: #777;
       border-top: 1px solid #ddd;
       padding-top: 15px;
     }
-    /* Imágenes responsivas */
-    .panel img {
-      width: 100%;
-      margin-bottom: 15px;
-      border-radius: 5px;
-    }
-    /* Video container style */
+    .panel img { width: 100%; margin-bottom: 15px; border-radius: 5px; }
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -226,22 +157,19 @@
       width: 100%;
       height: 100%;
     }
-	/* Fondo de imagen de nube azul celeste para la sección Reflexión */
-#reflexion .panel {
-  background-image: url('https://github.com/CursoAvampace/DCM/blob/main/nube.jpg?raw=true'); /* Reemplaza con la ruta real de tu imagen */
-  background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
-  background-position: center; /* Centra la imagen en el contenedor */
-  padding: 20px; /* Espacio interno para el contenido */
-  color: #333; /* Color de texto para asegurar legibilidad */
-}
-
-
-
+    /* Fondo para la sección Reflexión */
+    #reflexion .panel {
+      background-image: url('https://github.com/CursoAvampace/DCM/blob/main/nube.jpg?raw=true');
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      color: #333;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Encabezado con título dinámico -->
+    <!-- Encabezado -->
     <header data-aos="fade-down">
       <div class="dynamic-title">
         <h1>La Magia de la Psicomotricidad:</h1>
@@ -294,7 +222,6 @@
         <p>
           La psicomotricidad es un campo fundamental en la educación infantil, ya que permite el desarrollo integral del niño o niña a través del movimiento y la expresión corporal. Existen dos enfoques principales que han sido ampliamente estudiados y aplicados: la psicomotricidad vivenciada o relacional y la psicomotricidad directiva o dirigida. Este trabajo tiene como objetivo analizar sus características, beneficios y diferencias, para finalmente reflexionar sobre cuál de ellas brinda mayores oportunidades de desarrollo al niño o niña.
         </p>
-        <!-- Video embebido para la Introducción -->
         <div class="video-container" data-aos="zoom-in">
           <iframe src="https://www.youtube.com/embed/RB9Hs31A13A" title="Introducción a la Psicomotricidad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -321,7 +248,6 @@
             <li>Se utiliza en intervenciones terapéuticas para niños con dificultades emocionales o del desarrollo.</li>
           </ul>
         </div>
-        <!-- Video embebido para la Psicomotricidad Vivenciada -->
         <div class="video-container" data-aos="zoom-in">
           <iframe src="https://www.youtube.com/embed/9lmvJedKueY" title="Video Psicomotricidad Vivenciada" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -348,7 +274,6 @@
             <li>Es útil en la rehabilitación de niños con dificultades motrices.</li>
           </ul>
         </div>
-        <!-- Video embebido para la Psicomotricidad Directiva o Dirigida -->
         <div class="video-container" data-aos="zoom-in">
           <iframe src="https://www.youtube.com/embed/iCX32WCqOd8" title="Ejemplo de psicomotricidad directiva o dirigida" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
@@ -406,36 +331,40 @@
       </div>
     </section>
 
-    <!-- Pie de página -->
+    <!-- Pie de página con fecha completa -->
     <footer data-aos="fade-up">
       <p>&copy; <span id="currentYear"></span> Da Cunha Goncalves Ana Maria</p>
+      <p id="currentDate"></p>
     </footer>
   </div>
 
-  <!-- AOS Library JS -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    // Actualiza el año actual
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    // Función para el comportamiento tipo accordion (persiana)
-    var acc = document.getElementsByClassName("accordion");
-    for (var i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
+  <!-- AOS Library JS con defer -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Actualiza el año y muestra la fecha completa (día, mes, año y hora)
+      const now = new Date();
+      document.getElementById('currentYear').textContent = now.getFullYear();
+      document.getElementById('currentDate').textContent = now.toLocaleString('es-ES', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
       });
-    }
 
-    // Inicialización de las animaciones AOS
-    AOS.init({
-      duration: 800,
-      once: true
+      // Funcionalidad del acordeón
+      document.querySelectorAll(".accordion").forEach(el => {
+        el.addEventListener("click", function() {
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          panel.style.maxHeight = panel.style.maxHeight ? null : panel.scrollHeight + "px";
+        });
+      });
+
+      // Inicializa AOS
+      AOS.init({ duration: 800, once: true });
     });
   </script>
 </body>
