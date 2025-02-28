@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarea 3 La Psicomotricidad - Da Cunha Goncalves Ana Maria</title>
+  <!-- AOS Library CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     /* Fondo colorido */
     body {
       font-family: Arial, sans-serif;
@@ -203,12 +208,30 @@
       margin-bottom: 15px;
       border-radius: 5px;
     }
+    /* Video container style */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-top: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Encabezado con título dinámico -->
-    <header>
+    <header data-aos="fade-down">
       <div class="dynamic-title">
         <h1>La Magia de la Psicomotricidad:</h1>
       </div>
@@ -216,19 +239,19 @@
     </header>
 
     <!-- Página de título -->
-    <section class="page-title">
+    <section class="page-title" data-aos="fade-up">
       <h2>Tarea 3 La Psicomotricidad</h2>
       <p>Da Cunha Goncalves Ana Maria</p>
       <p>Explora, Descubre, Aprende: El Viaje de la Psicomotricidad</p>
     </section>
     
     <!-- Imagen de Portada -->
-    <section class="cover-image">
+    <section class="cover-image" data-aos="zoom-in">
       <img src="https://raw.githubusercontent.com/CursoAvampace/DCM/main/IMG_20250228_175235.jpg" alt="Imagen de Portada">
     </section>
 
     <!-- Tabla de Contenidos -->
-    <nav id="toc" class="toc">
+    <nav id="toc" class="toc" data-aos="fade-right">
       <h2>Indice</h2>
       <ul>
         <li><a href="#introduccion">1. Introducción</a></li>
@@ -254,27 +277,31 @@
     </nav>
 
     <!-- Sección 1: Introducción -->
-    <section id="introduccion" class="section">
+    <section id="introduccion" class="section" data-aos="fade-up">
       <button class="accordion">1. INTRODUCCIÓN</button>
       <div class="panel">
         <p>
           La psicomotricidad es un campo fundamental en la educación infantil, ya que permite el desarrollo integral del niño o niña a través del movimiento y la expresión corporal. Existen dos enfoques principales que han sido ampliamente estudiados y aplicados: la psicomotricidad vivenciada o relacional y la psicomotricidad directiva o dirigida. Este trabajo tiene como objetivo analizar sus características, beneficios y diferencias, para finalmente reflexionar sobre cuál de ellas brinda mayores oportunidades de desarrollo al niño o niña.
         </p>
+        <!-- Video embebido para la Introducción -->
+        <div class="video-container" data-aos="zoom-in">
+          <iframe src="https://www.youtube.com/embed/RB9Hs31A13A" title="Introducción a la Psicomotricidad" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="volver"><a href="#toc">VOLVER</a></div>
       </div>
     </section>
 
     <!-- Sección 2: Psicomotricidad vivenciada o relacional -->
-    <section id="vivenciada" class="section">
+    <section id="vivenciada" class="section" data-aos="fade-up">
       <button class="accordion">2. PSICOMOTRICIDAD VIVENCIADA O RELACIONAL</button>
       <div class="panel">
-        <div id="vivenciada-fundamentos">
+        <div id="vivenciada-fundamentos" data-aos="fade-right">
           <h3>2.1. Características y fundamentos</h3>
           <p>
             La psicomotricidad vivenciada, propuesta por André Lapierre y Bernard Aucouturier, se basa en el juego libre y la expresividad del niño o niña. Este modelo promueve la exploración del entorno sin una estructura fija, permitiendo que cada infante descubra su cuerpo y sus emociones en relación con los demás.
           </p>
         </div>
-        <div id="vivenciada-beneficios">
+        <div id="vivenciada-beneficios" data-aos="fade-left">
           <h3>2.2. Beneficios y aplicaciones</h3>
           <ul class="benefits">
             <li>Fomenta la creatividad y la espontaneidad.</li>
@@ -283,21 +310,25 @@
             <li>Se utiliza en intervenciones terapéuticas para niños con dificultades emocionales o del desarrollo.</li>
           </ul>
         </div>
+        <!-- Video embebido para la Psicomotricidad Vivenciada -->
+        <div class="video-container" data-aos="zoom-in">
+          <iframe src="https://www.youtube.com/embed/9lmvJedKueY" title="Video Psicomotricidad Vivenciada" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="volver"><a href="#toc">VOLVER</a></div>
       </div>
     </section>
 
     <!-- Sección 3: Psicomotricidad directiva o dirigida -->
-    <section id="directiva" class="section">
+    <section id="directiva" class="section" data-aos="fade-up">
       <button class="accordion">3. PSICOMOTRICIDAD DIRECTIVA O DIRIGIDA</button>
       <div class="panel">
-        <div id="directiva-fundamentos">
+        <div id="directiva-fundamentos" data-aos="fade-right">
           <h3>3.1. Características y fundamentos</h3>
           <p>
             Defendida por Henry Vayer, la psicomotricidad directiva se centra en una estructura organizada y actividades prediseñadas para el desarrollo de habilidades motoras específicas. Se basa en la repetición de ejercicios y la mejora progresiva de las capacidades físicas y cognitivas.
           </p>
         </div>
-        <div id="directiva-beneficios">
+        <div id="directiva-beneficios" data-aos="fade-left">
           <h3>3.2. Beneficios y aplicaciones</h3>
           <ul class="benefits">
             <li>Favorece el desarrollo de habilidades motoras específicas.</li>
@@ -306,15 +337,19 @@
             <li>Es útil en la rehabilitación de niños con dificultades motrices.</li>
           </ul>
         </div>
+        <!-- Video embebido para la Psicomotricidad Directiva o Dirigida -->
+        <div class="video-container" data-aos="zoom-in">
+          <iframe src="https://www.youtube.com/embed/iCX32WCqOd8" title="Ejemplo de psicomotricidad directiva o dirigida" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <div class="volver"><a href="#toc">VOLVER</a></div>
       </div>
     </section>
 
     <!-- Sección 4: Comparación entre ambos modelos -->
-    <section id="comparacion" class="section">
+    <section id="comparacion" class="section" data-aos="fade-up">
       <button class="accordion">4. COMPARACIÓN ENTRE AMBOS MODELOS</button>
       <div class="panel">
-        <img src="https://github.com/CursoAvampace/DCM/blob/main/tabla.jpg?raw=true" alt="Comparación de modelos">
+        <img src="https://github.com/CursoAvampace/DCM/blob/main/tabla.jpg?raw=true" alt="Comparación de modelos" data-aos="zoom-in">
         <p>
           Aquí se puede incluir una comparación visual o textual que resalte las diferencias y similitudes entre la psicomotricidad vivenciada y la directiva.
         </p>
@@ -323,7 +358,7 @@
     </section>
 
     <!-- Sección 5: Reflexión personal -->
-    <section id="reflexion" class="section">
+    <section id="reflexion" class="section" data-aos="fade-up">
       <button class="accordion">5. REFLEXIÓN PERSONAL</button>
       <div class="panel">
         <p>
@@ -334,19 +369,19 @@
     </section>
 
     <!-- Sección 6: Conclusión -->
-    <section id="conclusion" class="section">
+    <section id="conclusion" class="section" data-aos="fade-up">
       <button class="accordion">6. CONCLUSIÓN</button>
       <div class="panel">
-        <img src="https://github.com/CursoAvampace/DCM/blob/main/tabla%20conclusion.jpg?raw=true" alt="Conclusión">
+        <img src="https://github.com/CursoAvampace/DCM/blob/main/tabla%20conclusion.jpg?raw=true" alt="Conclusión" data-aos="zoom-in">
         <p>
-          La Conclusion
+          La Conclusión
         </p>
         <div class="volver"><a href="#toc">VOLVER</a></div>
       </div>
     </section>
 
     <!-- Sección 7: Bibliografía y webgrafía -->
-    <section id="bibliografia" class="section">
+    <section id="bibliografia" class="section" data-aos="fade-up">
       <button class="accordion">7. BIBLIOGRAFÍA Y WEBGRAFÍA</button>
       <div class="panel">
         <p>
@@ -361,11 +396,13 @@
     </section>
 
     <!-- Pie de página -->
-    <footer>
+    <footer data-aos="fade-up">
       <p>&copy; <span id="currentYear"></span> Da Cunha Goncalves Ana Maria</p>
     </footer>
   </div>
 
+  <!-- AOS Library JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     // Actualiza el año actual
     document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -383,6 +420,12 @@
         }
       });
     }
+
+    // Inicialización de las animaciones AOS
+    AOS.init({
+      duration: 800,
+      once: true
+    });
   </script>
 </body>
 </html>
